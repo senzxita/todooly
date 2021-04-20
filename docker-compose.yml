@@ -15,7 +15,8 @@ services:
       - MYSQL_PASSWORD=password
   api:
     container_name: todooly_api
-    build: .
+    build: ./api
+    image: todooly-api
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/todooly/api
@@ -23,3 +24,11 @@ services:
       - "8000:8000"
     depends_on:
       - db
+  ui:
+    build: ./frontend
+    container_name: todooly-ui
+    image: todooly-frontend
+    ports:
+        - "7000:7000"
+
+    

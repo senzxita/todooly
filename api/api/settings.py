@@ -82,9 +82,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'todooly',
-        'HOST': 'todooly_db',
-        'USER': 'user',
-        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'USER': 'newuser',
+        'PASSWORD': 'Password1.',
         'PORT': '3306'
     }
 }
