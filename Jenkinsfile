@@ -56,9 +56,9 @@ pipeline {
     
 
 
-    post {
-        always {
-            sh "docker-compose down || true"
-        }
-    }
+    // post {
+    //     always {
+    //         sh "docker-compose down || true"
+    //     }
+    // }
 }
