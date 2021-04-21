@@ -17,9 +17,6 @@ services:
     container_name: todooly_api
     build: ./api
     image: todooly-api
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/todooly/api
     ports:
       - "8000:8000"
     depends_on:

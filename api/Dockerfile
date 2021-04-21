@@ -10,4 +10,8 @@ WORKDIR /todooly
 RUN mkdir api
 WORKDIR api
 COPY requirements.txt /todooly/api
+
 RUN pip install -r requirements.txt
+COPY . /todooly/api
+
+CMD ["bash", "run.sh"]
