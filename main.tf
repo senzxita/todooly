@@ -86,10 +86,10 @@ resource "google_sql_database_instance" "todooly-mysql" {
   name             = "todooly"
   database_version = "mysql:5.7"
   region           = "us-central1"
-  HOST             = "db"
-  USER             = "user"
-  PASSWORD         = "password"
-  PORT             = "3306"
+  host             = "db"
+  user             = "user"
+  password         = "password"
+  port             = "3306"
   depends_on = [google_service_networking_connection.private_vpc_connection]
 
   settings {
