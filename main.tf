@@ -83,9 +83,13 @@ resource "random_id" "db_name_suffix" {
 resource "google_sql_database_instance" "todooly-mysql" {
   provider = google-beta
 
-  name             = "mysql-db-${random_id.db_name_suffix.hex}"
+  name             = "todooly"
   database_version = "mysql:5.7"
   region           = "us-central1"
+  HOST             = "db"
+  USER             = "user"
+  PASSWORD         = "password"
+  PORT             = "3306"
   depends_on = [google_service_networking_connection.private_vpc_connection]
 
   settings {
