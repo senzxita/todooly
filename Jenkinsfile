@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     environment {
-        TF_WORKSPACE = 'dev'
-        TF_IN_AUTOMATION = 'true'
+        //TF_WORKSPACE = 'dev'
+        //TF_IN_AUTOMATION = 'true'
         TF_FILE = main.tf
         credentials = file("sca-project-310411-060cb71eb513.json")
         project = "Cloud-School-Project"
