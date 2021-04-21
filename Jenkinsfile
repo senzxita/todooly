@@ -16,10 +16,7 @@ pipeline {
     stages {
         stage('Build images') {
             steps {
-               echo 'building the frontend of the application...'
-               sh 'sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
-               sh "sudo chmod +x /usr/local/bin/docker-compose"
-               sh "echo $PATH"
+               
                sh "docker-compose build"
                              
                
@@ -50,9 +47,7 @@ pipeline {
     
         stage('Deploy') {
             steps {
-                sh "curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -"
-                sh 'sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"'
-                sh "sudo apt install terraform"
+                
                 sh "terraform init"
                 sh "terraform plan"
                 sh "terraform apply"
