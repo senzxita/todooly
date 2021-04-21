@@ -5,8 +5,12 @@ pipeline {
     environment {
         TF_WORKSPACE = 'dev'
         TF_IN_AUTOMATION = 'true'
+        TF_FILE = main.tf
         credentials = file("sca-project-310411-060cb71eb513.json")
         project = "Cloud-School-Project"
+
+        COMPOSE_FILE = "docker-compose.yml"
+        
     }
 
     stages {
@@ -15,7 +19,7 @@ pipeline {
                echo 'building the frontend of the application...'
                sh "docker-compose build"
                              
-               }
+               
             }
         }
 
@@ -33,6 +37,7 @@ pipeline {
             }
             finally {
                 junit 'reports/junit.xml'
+            }
 
             if (testsError) {
                 throw testsError
