@@ -29,7 +29,7 @@ pipeline {
               // sh "docker login docker.io"
 
                //sh "docker push senzxita/todooly-frontend:latest"
-               sh "docker push senzxita/sca_project_:latest"
+               sh "docker push senzxita/sca_final_project:latest"
                //sh "docker-compose push senzxita/todooly-frontend:latest"
                              
                
