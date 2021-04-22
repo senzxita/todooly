@@ -20,13 +20,13 @@ pipeline {
                
                sh "docker-compose build"
                sh "docker tag d567cef3224c senzxita/todooly-frontend:latest" 
-<<<<<<< HEAD
+
                sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
-=======
-               sh "docker login -u senzxita -p folakemi1."
+
+              // sh "docker login -u senzxita -p folakemi1."
                 
-               sh "docker login docker.io"
->>>>>>> f6e9406374e5ed434f50bbcad85dd885287287e0
+              // sh "docker login docker.io"
+
                sh "docker push senzxita/todooly-frontend:latest"
                //sh "docker-compose push senzxita/todooly-frontend:latest"
                              
