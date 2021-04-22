@@ -20,7 +20,7 @@ pipeline {
                sh "docker-compose build"
                //sh "docker login"
                //sh "docker-compose push senzxita/todooly-api:latest"
-               sh "docker-compose push senzxita/todooly-frontend:latest"
+               //sh "docker-compose push senzxita/todooly-frontend:latest"
                              
                
             }
