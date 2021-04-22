@@ -19,8 +19,8 @@ pipeline {
             steps {
                
                sh "docker-compose build"
-               sh "docker tag d567cef3224c senzxita/todooly-frontend:latest"
-               sh "docker tag 4a797949b4cd senzxita/todooly-api"
+               sh "docker tag d567cef3224c senzxita/sca_final_project:latest"
+               sh "docker tag 4a797949b4cd senzxita/sca_final_project:latest"
 
               // sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
 
@@ -28,8 +28,8 @@ pipeline {
                 
               // sh "docker login docker.io"
 
-               sh "docker push senzxita/todooly-frontend:latest"
-               sh "docker push senzxita/todooly-api:latest"
+               //sh "docker push senzxita/todooly-frontend:latest"
+               sh "docker push senzxita/sca_project_:latest"
                //sh "docker-compose push senzxita/todooly-frontend:latest"
                              
                
