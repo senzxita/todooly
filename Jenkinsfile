@@ -20,6 +20,7 @@ pipeline {
                
                sh "docker-compose build"
                sh "docker tag d567cef3224c senzxita/todooly-frontend:latest" 
+               sh "docker login docker.io"
                sh "docker push senzxita/todooly-frontend:latest"
                //sh "docker-compose push senzxita/todooly-frontend:latest"
                              
