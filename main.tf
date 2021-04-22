@@ -20,7 +20,7 @@ resource "google_project_service" "run" {
   service = "run.googleapis.com"
 }
 
-resource "google_cloud_run_service" "SCA-service" {
+resource "google_cloud_run_service" "sca-service" {
   name = "SCA-service" 
   location = "us-central1"
 
