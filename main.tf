@@ -20,7 +20,7 @@ resource "google_project_service" "run" {
   service = "run.googleapis.com"
 }
 
-resource "google_cloud_run_service" "sca-service" {
+resource "google_cloud_run_service" "sca_service" {
   name = "sca-service" 
   location = "us-central1"
 
@@ -42,14 +42,14 @@ resource "google_cloud_run_service" "sca-service" {
  
 
 resource "google_cloud_run_service_iam_member" "allUsers" {
-  service  = google_cloud_run_service.SCA-service.name
-  location = google_cloud_run_service.SCA-service.location
+  service  = google_cloud_run_service.sca_service.name
+  location = google_cloud_run_service.sca_service.location
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
 
 output "url" {
-  value = "${google_cloud_run_service.SCA-service.status[0].url}"
+  value = "${google_cloud_run_service.sca_service.status[0].url}"
 }
 
 resource "google_compute_network" "private_network" {
