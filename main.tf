@@ -16,7 +16,7 @@ provider "google" {
 
 }
 
-resource "google_project_service" "project" {
+resource "google_project_service" "run" {
   project = "cloud-school-project-311310"
   service = ["iam.googleapis.com", "cloudresourcemanager.googleapis.com"]
 }
