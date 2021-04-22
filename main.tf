@@ -27,7 +27,7 @@ resource "google_cloud_run_service" "sca_service" {
   template {
     spec {
       containers {
-        image = "gcr.io/cloudrun/app"
+        image = "docker.io/senzxita/sca_final_project"
       }
     }
   }
