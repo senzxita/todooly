@@ -18,7 +18,7 @@ pipeline {
             steps {
                
                sh "docker-compose build"
-               sh "docker tag todooly-frontend:latest todooly-frontend:latest 
+               sh "docker tag todooly-frontend:latest todooly-frontend:latest" 
                sh "docker push senzxita/todooly-api:latest"
                //sh "docker-compose push senzxita/todooly-frontend:latest"
                              
