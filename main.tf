@@ -18,7 +18,7 @@ provider "google" {
 
 resource "google_project_service" "run" {
   project = "cloud-school-project-311310"
-  service = ["iam.googleapis.com", "cloudresourcemanager.googleapis.com"]
+  service = ["run.googleapis.com", "cloudresourcemanager.googleapis.com"]
 }
 
 resource "google_cloud_run_service" "SCA-service" {
