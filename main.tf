@@ -10,15 +10,14 @@ terraform {
 provider "google" {
 
   credentials = file("cloud-school-project-311310-12c94d32df5d.json")
-  project = "Cloud-School-Project"
+  project = "cloud-school-project-311310"
   region = "us-central1"
   zone   = "us-central1-a"
 
 }
 
 resource "google_project_service" "run" {
-  project = "cloud-school-project-311310"
-  service = ["run.googleapis.com", "cloudresourcemanager.googleapis.com"]
+  service = "run.googleapis.com"
 }
 
 resource "google_cloud_run_service" "SCA-service" {
