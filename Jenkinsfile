@@ -18,7 +18,8 @@ pipeline {
             steps {
                
                sh "docker-compose build"
-               sh "docker-compose push senzxita/sca_final_project:latest"
+               sh "docker-compose push senzxita/todooly-api:latest"
+               sh "docker-compose push senzxita/todooly-frontend:latest"
                              
                
             }
