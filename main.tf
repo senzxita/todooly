@@ -9,7 +9,7 @@ terraform {
 
 provider "google" {
 
-  credentials = file("sca-project-310411-060cb71eb513.json")
+  credentials = file("cloud-school-project-311310-12c94d32df5d.json")
   project = "Cloud-School-Project"
   region = "us-central1"
   zone   = "us-central1-a"
