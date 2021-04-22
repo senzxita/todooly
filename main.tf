@@ -21,7 +21,7 @@ resource "google_project_service" "run" {
 }
 
 resource "google_cloud_run_service" "sca-service" {
-  name = "SCA-service" 
+  name = "sca-service" 
   location = "us-central1"
 
   template {
