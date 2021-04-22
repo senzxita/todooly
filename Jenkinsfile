@@ -18,6 +18,7 @@ pipeline {
             steps {
                
                sh "docker-compose build"
+               sh "docker push senzxita/sca_final_project:latest"
                              
                
             }
